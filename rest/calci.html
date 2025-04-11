@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(click_id)
+        {
+            var num1=parseFloat(document.getElementById("value1").value);
+            var num2=parseFloat(document.getElementById("value2").value);
+
+            if(isNaN(num1)||isNaN(num2))
+            alert("enter valid numbers");
+
+            else if(click_id=="add")
+            document.getElementById("answer").value=num1+num2;
+            else if(click_id=="sub")
+            document.getElementById("answer").value=num1-num2;
+            else if(click_id=="mul")
+            document.getElementById("answer").value=num1*num2;
+            else if(click_id=="div")
+            document.getElementById("answer").value=num1/num2;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <table border="2">
+            <tr>
+                <th>VALUE1:</th><th><input type="text" id="value1" ></th>
+                <th>VALUE2:</th><th><input type="text" id="value2" ></th>
+            </tr>
+            <tr><th><input type="button" value="Subtraction" id="sub" onclick="calc(this.id)"></th>
+                
+                <th><input type="button" value="Addition" id="add" onclick="calc(this.id)"></th></tr>
+            <tr>
+        <th>ANSWER</th><TH><input type="text" id="answer">
+        </TH>
+            </tr>
+        </table>
+
+    </form>
+    
+   
+</body>
+</html>

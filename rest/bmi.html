@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bmi(click_id) {
+            var wgt = parseFloat(document.getElementById("value1").value);
+            var hgt = parseFloat(document.getElementById("value2").value);
+
+            if (isNaN(wgt) || isNaN(hgt))
+                alert("enter valid");
+
+             if (click_id = "bmi")
+                document.getElementById("answer").value = wgt / (hgt * hgt);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>WEIGHT:
+        <input type="text" id="value1"></p>
+    </div>
+    <div>
+        <p>HEIGHT:
+        <input type="text" id="value2"></p>
+    </div>
+    <div>
+        <input type="button" value="BMI" id="bmi" onclick="bmi()">
+        <input type="text" id="answer">
+    </div>
+</body>
+
+</html>

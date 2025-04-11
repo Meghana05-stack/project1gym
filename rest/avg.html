@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        function avg(click_id) {
+            var num1 = parseFloat(document.getElementById("value1").value);
+            var num2 = parseFloat(document.getElementById("value2").value);
+            var num3 = parseFloat(document.getElementById("value3").value);
+
+            document.getElementById("answer").value = (num1 + num2 + num3) / 3;
+        }
+        function per(click_id) {
+            var num1 = parseFloat(document.getElementById("value1").value);
+            var num2 = parseFloat(document.getElementById("value2").value);
+            var num3 = parseFloat(document.getElementById("value3").value);
+
+            document.getElementById("answer1").value = num1 * 100 / (num1 + num2 + num3);
+            document.getElementById("answer2").value = num2 * 100 / (num1 + num2 + num3);
+            document.getElementById("answer3").value = num2 * 100 / (num1 + num2 + num3);
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        NUM1:<input type="text" id="value1">
+        NUM2:<input type="text" id="value2">
+        NUM3:<input type="text" id="value3">
+    </p>
+    <p>
+        <input type="button" value="AVERAGE" id="answe" onclick="avg(this.id)">
+        <input type="text" id="answer">
+        <input type="button" value="PERCENTAGE" id="answer" onclick="per(this.id)">
+        <input type="text" id="answer1">
+    </p>
+
+
+</body>
+
+</html>
